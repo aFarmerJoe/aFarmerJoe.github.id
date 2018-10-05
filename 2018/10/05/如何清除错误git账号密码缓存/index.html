@@ -8,18 +8,22 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>如何清除错误git账号密码缓存 | 一个栗子</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一个前端工程师的生活">
-<meta name="keywords" content="小程序">
+  <meta name="description" content="最近，栗子哥我换了台电脑撸代码，电脑很快，撸起来很爽！完事儿的时候，用git提交代码，换了一台电脑嘛，git也是新装的，第一次提交代码要输入账号密码，我一直对自己的记忆力非常有信心,">
+<meta name="keywords" content="Git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何清除错误git账号密码缓存">
 <meta property="og:url" content="http://yoursite.com/2018/10/05/如何清除错误git账号密码缓存/index.html">
 <meta property="og:site_name" content="一个栗子">
-<meta property="og:description" content="一个前端工程师的生活">
+<meta property="og:description" content="最近，栗子哥我换了台电脑撸代码，电脑很快，撸起来很爽！完事儿的时候，用git提交代码，换了一台电脑嘛，git也是新装的，第一次提交代码要输入账号密码，我一直对自己的记忆力非常有信心,">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-10-05T06:25:44.236Z">
+<meta property="og:image" content="http://pg43o89xl.bkt.clouddn.com/git%E5%AF%86%E7%A0%81%E6%8A%A5%E9%94%99%E5%9B%BE.png">
+<meta property="og:image" content="http://pg43o89xl.bkt.clouddn.com/%E6%80%8E%E4%B9%88%E5%8A%9E.jpg">
+<meta property="og:image" content="http://pg43o89xl.bkt.clouddn.com/%E5%88%A0%E9%99%A4git%E5%AF%86%E7%A0%81%E7%BC%93%E5%AD%98%E5%9B%BE.png">
+<meta property="og:updated_time" content="2018-10-05T08:54:07.044Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何清除错误git账号密码缓存">
-<meta name="twitter:description" content="一个前端工程师的生活">
+<meta name="twitter:description" content="最近，栗子哥我换了台电脑撸代码，电脑很快，撸起来很爽！完事儿的时候，用git提交代码，换了一台电脑嘛，git也是新装的，第一次提交代码要输入账号密码，我一直对自己的记忆力非常有信心,">
+<meta name="twitter:image" content="http://pg43o89xl.bkt.clouddn.com/git%E5%AF%86%E7%A0%81%E6%8A%A5%E9%94%99%E5%9B%BE.png">
   
     <link rel="alternative" href="/atom.xml" title="一个栗子" type="application/atom+xml">
   
@@ -183,7 +187,22 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>最近，栗子哥我换了台电脑撸代码，电脑很快，撸起来很爽！完事儿的时候，用git提交代码，换了一台电脑嘛，git也是新装的，第一次提交代码要输入账号密码，我一直对自己的记忆力非常有信心,<br><a id="more"></a><br><img src="http://pg43o89xl.bkt.clouddn.com/git%E5%AF%86%E7%A0%81%E6%8A%A5%E9%94%99%E5%9B%BE.png" alt=""></p>
+<p>果不其然的写错了，<code>Incorrect username or password</code>账号或者密码错误。</p>
+<p>用过git的都知道，git第一次提交的时候，是会让你输入账号和密码的，你输入完账号和密码之后git就会自动帮你缓存凭证，我们下次提交代码的时候就不用在去输入账号和密码，直接push就可以提交了。</p>
+<p>但是，我TM把账号和密码记错了，然而git这个傻儿子不管三七二十七就把它缓存起来了……</p>
+<p><img src="http://pg43o89xl.bkt.clouddn.com/%E6%80%8E%E4%B9%88%E5%8A%9E.jpg" alt=""></p>
+<p>那现在要做的就是消除本地缓存啦，消除git错误的缓存需要以下6步：</p>
+<ul>
+<li>打开控制面板</li>
+<li>找到所有控制面板项</li>
+<li>点击凭据管理器</li>
+<li>点击<strong>Windows凭据</strong></li>
+<li>在窗口的下半部分<strong>普通凭据</strong>里面存储着各个账号的缓存，比如码云的，GitHub的等等</li>
+<li>选择你要操作的账号点击右边的小箭头就可以编辑或者删除缓存啦</li>
+</ul>
+<p><img src="http://pg43o89xl.bkt.clouddn.com/%E5%88%A0%E9%99%A4git%E5%AF%86%E7%A0%81%E7%BC%93%E5%AD%98%E5%9B%BE.png" alt=""></p>
+
       
 
       
@@ -212,6 +231,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Git</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -224,15 +254,6 @@
 
   
 <nav id="article-nav">
-  
-    <a href="/2018/10/05/小程序透明色的隐藏坑/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          小程序透明色的隐藏坑
-        
-      </div>
-    </a>
   
   
     <a href="/2018/10/04/小程序踩坑之一/" id="article-nav-older" class="article-nav-link-wrap">
@@ -364,6 +385,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">小程序</a>
