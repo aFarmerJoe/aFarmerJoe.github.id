@@ -8,18 +8,22 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>小程序透明色的隐藏坑 | 一个栗子</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一个前端工程师的生活">
+  <meta name="description" content="大家在写页面的时候肯定会有很多要设置透明度的时候，在小程序里边也是支持使用颜色透明度，但是这里面有一个坑，比较不容易发现">
 <meta name="keywords" content="小程序">
 <meta property="og:type" content="article">
 <meta property="og:title" content="小程序透明色的隐藏坑">
 <meta property="og:url" content="http://yoursite.com/2018/10/05/小程序透明色的隐藏坑/index.html">
 <meta property="og:site_name" content="一个栗子">
-<meta property="og:description" content="一个前端工程师的生活">
+<meta property="og:description" content="大家在写页面的时候肯定会有很多要设置透明度的时候，在小程序里边也是支持使用颜色透明度，但是这里面有一个坑，比较不容易发现">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-10-05T08:13:22.004Z">
+<meta property="og:image" content="http://pg43o89xl.bkt.clouddn.com/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%8D%8A%E9%80%8F%E6%98%8E%E8%93%9D%E8%89%B2.png">
+<meta property="og:image" content="http://pg43o89xl.bkt.clouddn.com/%E5%8F%AF%E6%8A%8A%E6%88%91%E7%BB%99%E7%89%9B%E9%80%BC%E5%9D%8F.jpg">
+<meta property="og:image" content="http://pg43o89xl.bkt.clouddn.com/%E5%B4%A9%E6%BA%83.jpg">
+<meta property="og:updated_time" content="2018-10-05T08:58:42.848Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="小程序透明色的隐藏坑">
-<meta name="twitter:description" content="一个前端工程师的生活">
+<meta name="twitter:description" content="大家在写页面的时候肯定会有很多要设置透明度的时候，在小程序里边也是支持使用颜色透明度，但是这里面有一个坑，比较不容易发现">
+<meta name="twitter:image" content="http://pg43o89xl.bkt.clouddn.com/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%8D%8A%E9%80%8F%E6%98%8E%E8%93%9D%E8%89%B2.png">
   
     <link rel="alternative" href="/atom.xml" title="一个栗子" type="application/atom+xml">
   
@@ -183,7 +187,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>大家在写页面的时候肯定会有很多要设置透明度的时候，在小程序里边也是支持使用颜色透明度，但是这里面有一个坑，比较不容易发现<br><a id="more"></a><br>前端里面，我们比较常用的表示颜色的方法有用<strong>英文单词表示法</strong>，<strong>RGBA表示法</strong>，<strong>十六进制表示法</strong>，但是英文单词能表现的颜色种类比较少，而且不用表示透明度，所以一般后两种用的比较多。</p>
+<p>使用<strong>RGBA表示法</strong>在小程序中是没有问题的，无论是在开发者工具还是在真机上运行都是正常显示。</p>
+<p>但是<strong>十六进制表示法</strong>就不行了，比如说随便说颜色<code>#3181fe</code>，是一个不透明的蓝色。</p>
+<p>我们把鼠标悬浮在代码编辑框的<code>#3181fe</code>上面调出开发工具的调色板，滑动右边的透明度调节阀，只要透明度低于1，就会在原来颜色表达式的后面添加两个字符来表达透明度。</p>
+<p><img src="http://pg43o89xl.bkt.clouddn.com/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%8D%8A%E9%80%8F%E6%98%8E%E8%93%9D%E8%89%B2.png" alt=""></p>
+<p>在<strong>微信web开发者工具</strong>的模拟器中是正常显示，你想怎么来就怎来，一起都OJBK。</p>
+<p><img src="http://pg43o89xl.bkt.clouddn.com/%E5%8F%AF%E6%8A%8A%E6%88%91%E7%BB%99%E7%89%9B%E9%80%BC%E5%9D%8F.jpg" alt=""></p>
+<p>然鹅，当你打开真机调试……</p>
+<p><img src="http://pg43o89xl.bkt.clouddn.com/%E5%B4%A9%E6%BA%83.jpg" alt=""></p>
+<p>很不幸的告诉你，目前的<code>v2.3.0</code>基础库版本在真机上是<strong>不支持十六进制透明度</strong>，老老实实写<strong>RGBA</strong>吧。</p>
+
       
 
       
@@ -212,6 +226,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">小程序</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -355,6 +380,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">小程序</a>
